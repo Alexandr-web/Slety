@@ -18,7 +18,7 @@ const sy = new Slety({
     total: 0,
   },
   // Here you can make an observer for state changes
-  watchers: {
+  observe: {
     // The name of the observer should depend on the name of the state you want to track
     num1(newVal) {
       // When the state of num1 changes, the product of num1 and num2 is written to the total state
