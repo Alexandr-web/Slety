@@ -1,3 +1,4 @@
 node_modules
 dist
-src/main.js
+src/js/main.js
+src/*.html
