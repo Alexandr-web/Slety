@@ -28,10 +28,7 @@
     "semi": "error",
     "no-plusplus": "off",
     "eol-last": "off",
-    "arrow-body-style": [
-      "error",
-      "as-needed"
-    ],
+    "arrow-body-style": "off",
     "no-unused-vars": "warn",
     "no-alert": "off",
     "prefer-destructuring": "off",
@@ -75,6 +72,7 @@
     "no-confusing-arrow": "off",
     "prefer-object-spread": "off",
     "default-case": "off",
-    "no-debugger": "off"
+    "no-debugger": "off",
+    "default-param-last": "off"
   }
 }
