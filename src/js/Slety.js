@@ -1,13 +1,9 @@
-import VDom from "./VDom";
-
-export default class Slety extends VDom {
-  constructor({ state = {}, observe = {}, actions = {}, el = "", }) {
-    super(el ? document.querySelector(el) : null);
+export default class Slety {
+  constructor({ state = {}, observe = {}, actions = {}, }) {
     this.state = state;
     this.observe = observe;
     this.actions = actions;
     this.data = {};
-    this.vdom = {};
   }
 
   setState(stateKey, key, val) {
@@ -54,22 +50,12 @@ export default class Slety extends VDom {
     });
   }
 
-  setVirtualDOM() {
-    const objElement = this.setObjectElement(this.el);
-
-    if (objElement.el.isEqualNode(this.el)) {
-      this.vd.push(objElement);
-    }
-  }
-
   init() {
     this.data = Object.assign({}, this.state, { setState: this.setState.bind(this), });
 
     Object.keys(this.actions).map((key) => this.actions[key] = this.actions[key].bind(this.data));
     Object.assign(this.data, this.actions);
 
-    this.setVirtualDOM();
-    this.mutationObserve();
     this.setReactivity();
 
     return this.data;

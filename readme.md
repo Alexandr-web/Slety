@@ -18,6 +18,6 @@ const options = {
 const sy = new Slety(options).init();
 ```
 
-## Plans
+## Meaning
 
-During the development process, I want to cover topics such as reactivity, virtual DOM, and a couple of options on the Vue object: methods, computed, watch, data...
+I want to understand how reactivity works in Vue
